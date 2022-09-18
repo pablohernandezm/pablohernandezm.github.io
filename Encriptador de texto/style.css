@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+:root{
+    --primaryColor:#103A57;
+    --bgColor:#D5F4FF;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color:var(--primaryColor);
+    text-decoration: none;
+}
+::placeholder{
+    color: var(--primaryColor);
+}
+
+html{
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+}
+
+body{
+    min-height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: var(--bgColor);
+}
+
+main{
+    padding: 10vh 3vw 3vh 3vw;
+}
+footer{
+    margin-top: auto;
+    margin-left: auto;
+    padding: 1em;
+}
+
+h1{
+    margin-left: 5vw;
+}
+
+input{
+    background-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: var(--primaryColor);
+    height: 2.5em;
+    min-width: 7em;
+    font-size: 100%;
+}
+
+input:hover{
+    cursor: pointer;
+    background-color: var(--primaryColor);
+    color: white;
+    transition: 200ms all;
+}
+
+.transparent{
+    background-color: transparent;
+}
+
+.rows{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.content-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5vw;
+    min-height: 100%;
+    width: 85vw;
+    margin: 0 auto 20px auto;
+}
+
+#input-container{
+    width: 50vw;
+    margin-top: 20px;
+}
+
+#input-container textarea{
+    font-family: 'Quantico', sans-serif;
+}
+
+#output-container{
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 2vh 2vw 2vh 2vw;
+    width: 30vw;
+    min-height: 24em;
+    min-width: 194px;
+}
+
+#output{
+    width: 100%;
+}
+
+#input{
+    width: 100%;
+}
+
+#input:focus{
+    box-shadow: 0 0 10px var(--primaryColor);
+}
+
+#buttons-container{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+#buttons-container input{
+    width: 100%;
+    outline: none;
+    margin: 10px;
+}
+
+textarea{
+    resize: none;
+    height: 50vh;
+    border: none;
+    padding: 2em;
+    font-size: 1.2em;
+}
+
+textarea:focus{
+    outline: none !important;
+    border:none;
+    border-radius: 5px;
+}
+
+#voidInput{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+#voidInput>img{
+    margin: 0 auto;
+    width: 10.7em;
+}
+
+#voidInput>div{
+    text-align: center;
+}
+
+.tip{
+    font-size: 80%;
+    text-align: right;
+    margin-right: 10px;
+    padding: 1em;
+}
+
+@media only screen and (max-width: 660px){
+     #buttons-container{
+         flex-wrap: wrap;
+     }
+
+    .content-container{
+        width: 100%;
+        padding: 20px;
+    }
+
+    main{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #output{
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .content-container{
+        grid-template-columns: none;
+    }
+
+    #input-container{
+        width: 100%;
+    }
+
+    #output-container{
+        width: 100%;
+    }
+
+    #input{
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 420px){
+
+}

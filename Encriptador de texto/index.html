@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Encripta y descifra tu texto inmediatamente y comparte el resultado con tus amigos.">
+    <!--CSS-->
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <!--Pre-connect-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!--Scripts-->
+    <script src="https://kit.fontawesome.com/af38a0daa9.js" crossorigin="anonymous"></script>
+    <script src="encrypter.js" type="text/javascript" defer></script>
+
+    <!--Title-->
+    <title>Encriptador de texto</title>
+</head>
+<body>
+    <main>
+        <h1>Encriptador de texto</h1>
+        <div class="content-container">
+            <div id="input-container" class="rows">
+                <textarea id="input" class="transparent" placeholder="Escribe aquí tu texto"></textarea>
+
+                <div class="tip"><i class="fa-solid fa-circle-info"></i> Doble clic para limpiar</div>
+
+                <div id="buttons-container">
+                    <input id="encryptBtn" type="button" value="Encriptar">
+                    <input id="decryptBtn" type="button" value="Desencriptar">
+                </div>
+            </div>
+
+            <div id="output-container" class="rows">
+                <div id="voidInput">
+                    <img src="img/undraw_loading_re_5axr.svg" alt="Esperando por el texto.">
+                    <div>
+                        <h2>Ningún mensaje fue encontrado</h2>
+                        <p>Ingrese un texto para encriptar/desencriptar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://github.com/RealPabloHernandez"><i class="fa-brands fa-github"></i> Pablo Hernández</a>
+    </footer>
+</body>
+</html>
