@@ -19,6 +19,7 @@ html{
     height: -webkit-fill-available;
     height: -moz-available;
     height: stretch;
+    font-size: max(20px, 3vw);
 }
 
 body{
@@ -42,34 +43,38 @@ footer{
     margin-top: auto;
     text-align: right;
     padding: 20px;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
-a:visited{
+a, a:visited{
     color: var(--clr-pfont);
 }
 
 h1{
     display: block;
-    font-size:6ch;
+    font-size:3rem;
     text-align: center;
     padding: 10px;
 }
 #gameContainer{
-    padding: 20px;
+    padding: 4%;
 }
 
 #gameContainer p{
     text-align: right;
 }
 
+#menuContainer input, #canvas, #keyboard, .key{
+    border: solid .1rem var(--clr-pfont);
+}
+
 #canvas, #keyboard, #menuContainer input{
-    box-shadow: 4px 4px 0 var(--clr-pfont), -4px -4px 0 var(--clr-pfont);
+    box-shadow: .2rem .2rem 0 var(--clr-pfont), -.2rem -.2rem 0 var(--clr-pfont);
 }
 
 #canvas{
     background-color: var(--clr-canvas);
-    margin: 10px auto;
+    margin: 3% auto;
     width: 100%;
 }
 
@@ -78,7 +83,6 @@ h1{
     height: fit-content;
     width: 100%;
     margin: 0 auto;
-    border:2px solid var(--clr-pfont);
 }
 
 .key{
@@ -86,9 +90,7 @@ h1{
     aspect-ratio: 1;
     margin:.8%;
     font-family: 'VT323',monospace;
-    font-size: large;
-    border:2px solid var(--clr-pfont);
-
+    font-size: .9rem;
 }
 .key:nth-child(11){
     margin-left: 4%;
@@ -99,19 +101,18 @@ h1{
 }
 
 #menuContainer{
-    padding: 0 20px;
+    padding: 0 4%;
 }
 
 #menuContainer input{
     font-family: 'Press Start 2P', cursive;
-    font-size: 2.5ch;
     word-spacing: -10px;
+    font-size: .8rem;
     color:var(--clr-pfont);
     display: block;
     width: 100%;
-    height: 40px;
-    border: solid 2px var(--clr-pfont);
-    margin: 5px 0 5px 0;
+    height: 2rem;    
+    margin: 2% 0 2% 0;
     background-color: var(--clr-input);
 }
 
@@ -119,8 +120,7 @@ h1{
     margin-bottom: 10px;
 }
 
-
- input:hover{
+input:hover{
     background-color: var(--clr-hover);
     cursor: pointer;
 }
