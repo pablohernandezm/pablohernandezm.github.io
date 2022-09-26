@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+:root{
+    --clr-canvas: rgb(77, 77, 77);
+    --clr-bg:#DDD;
+    --clr-pfont:#222;
+    --clr-input:#EEE;
+    --clr-hover:antiquewhite;
+}
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    height: 100%;
+    height: -webkit-fill-available;
+    height: -moz-available;
+    height: stretch;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: var(--clr-bg);
+    font-family: 'VT323', monospace;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+    color:var(--clr-pfont);
+}
+
+footer{
+    margin-top: auto;
+    text-align: right;
+    padding: 20px;
+    font-size: 20px;
+}
+
+a:visited{
+    color: var(--clr-pfont);
+}
+
+h1{
+    display: block;
+    font-size:6ch;
+    text-align: center;
+    padding: 10px;
+}
+#gameContainer{
+    padding: 20px;
+}
+
+#gameContainer p{
+    text-align: right;
+}
+
+#canvas, #keyboard, #menuContainer input{
+    box-shadow: 4px 4px 0 var(--clr-pfont), -4px -4px 0 var(--clr-pfont);
+}
+
+#canvas{
+    background-color: var(--clr-canvas);
+    margin: 10px auto;
+    width: 100%;
+}
+
+#keyboard{
+    background-color: var(--clr-canvas);
+    height: fit-content;
+    width: 100%;
+    margin: 0 auto;
+    border:2px solid var(--clr-pfont);
+}
+
+.key{
+    width: 8%;
+    aspect-ratio: 1;
+    margin:.8%;
+    font-family: 'VT323',monospace;
+    font-size: large;
+    border:2px solid var(--clr-pfont);
+
+}
+.key:nth-child(11){
+    margin-left: 4%;
+}
+
+.key:nth-child(21){
+    margin-left: 8%;
+}
+
+#menuContainer{
+    padding: 0 20px;
+}
+
+#menuContainer input{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5ch;
+    word-spacing: -10px;
+    color:var(--clr-pfont);
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: solid 2px var(--clr-pfont);
+    margin: 5px 0 5px 0;
+    background-color: var(--clr-input);
+}
+
+#menuContainer input:nth-child(1){
+    margin-bottom: 10px;
+}
+
+
+ input:hover{
+    background-color: var(--clr-hover);
+    cursor: pointer;
+}
