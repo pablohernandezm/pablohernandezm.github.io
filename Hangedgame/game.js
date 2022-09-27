@@ -3,12 +3,14 @@ const gc = document.getElementById("gameContainer");
 const cv = document.createElement("canvas");
 const counter=document.getElementById("counter");
 const kb = document.getElementById("keyboard");
+let words = ["AUTO","CAMION","PlXEL","PANTALLA","FRUTA","NIÑOS","ESPACIO","TECLADO","AIRE","AVE","ZETA","SETA","HONGO","CELULAR","RAIZ"];
 let attp;
 
 //Menu items
 const mc = document.getElementById("menuContainer");
 const menuBtn = document.createElement("input");
 const nGBtn = document.createElement("input");
+const word = document.getElementById("word");
 
 init();
 
@@ -16,6 +18,17 @@ function init(){
     /*Setting Game items */
     attp=6;
     counter.innerText=attp;
+    let wordn = Math.floor(Math.random()*words.length);
+    let wordstr = words[wordn];
+    for(let i=0; i<wordstr.length; i++){
+        let wordd = document.createElement("div");
+        setAttr(wordd, {"class":"letter"});
+        wordd.innerText=wordstr[i];
+        word.appendChild(wordd);
+
+    }
+
+
 
     /*Setting menu items*/
     setAttr(menuBtn, {"type":"button", "value":"Menú"});
@@ -28,9 +41,6 @@ function init(){
                 "A","S","D","F","G","H","J","K","L","Ñ",/*10*/
                 "Z","X","C","V","B","N","M"]/*7*/;
 
-    // for(let i; i<keys.length; i++){
-        
-    // }
     keys.forEach(e => {
         let keybtn = document.createElement("input");
         setAttr(keybtn, {"type":"button", "class":"key", "value":e});
