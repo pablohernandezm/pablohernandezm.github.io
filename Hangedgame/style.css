@@ -30,7 +30,7 @@ body{
     font-family: 'VT323', monospace;    
 }
 
-.game{
+#game, #mainMenu{
     display: flex;
     flex-direction: column;
     padding: 0 4%;
@@ -65,11 +65,11 @@ h1{
     text-align: right;
 }
 
-#menuContainer input, .screen, #keyboard, .key{
+#menuContainer input, .screen, #keyboard, .key, #nw{
     border: solid .1rem var(--clr-pfont);
 }
 
-.screen, #keyboard, #menuContainer input{
+.screen, #keyboard, #menuContainer input, #nw{
     box-shadow: .2rem .2rem 0 var(--clr-pfont), -.2rem -.2rem 0 var(--clr-pfont);
 }
 
@@ -120,7 +120,7 @@ input{
     color:var(--clr-pfont);
 }
 
-#keyboard input:hover, #controls input:hover{
+#keyboard input:hover, #controls input:hover, #mainMenu input[type="button"]:hover{
     background-color: var(--clr-hover);
     cursor: pointer;
 }
@@ -136,6 +136,52 @@ input{
     border-bottom: .1rem solid var(--clr-pfont);
 }
 
+.hidden{
+    display: none !important;
+}
+
+#nw{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    height: 2rem;
+    background-color: var(--clr-bg);
+    padding: .1rem;
+}
+
+#nw form{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#nw *{
+    font-family: 'Press Start 2P', cursive;
+    font-size: .8rem;
+}
+
+#nwI{
+    width: 90%;
+    background-color: var(--clr-bg);
+    text-align: center;
+    border: none;
+}
+
+#nwI:invalid{
+    border-color: red;
+}
+
+#nwAd{
+    height: 100%;
+    background-color: var(--clr-pfont);
+    color:var(--clr-bg);
+    aspect-ratio: 1/1;
+}
+
+#nwAd:hover{
+    cursor: pointer;
+}
+
 @media only screen and (orientation:landscape){
     html{
         font-size: max(20px, 3vw);
@@ -146,8 +192,9 @@ input{
         align-items: center;
     }
 
-    .game{
+    #game{
         flex-direction: row;
+        justify-content: center;
         width: 80%;
     }
 
