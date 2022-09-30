@@ -30,6 +30,7 @@ const newWordInput = document.createElement("input");
 const newWordAdd = document.createElement("input");
 
 let inGame=true;
+let gameEnd=false;
 
 init();
 
@@ -132,6 +133,18 @@ function toggleKey(el){
     el.classList.toggle("usedKey");
 }
 
+document.onkeydown = function (e) {
+    if(!gameEnd){
+        let keys = kb.getElementsByClassName("key");
+        let key = e.key.toUpperCase();
+        for(let i=0; i<keys.length; i++){
+            if(key==keys[i].value){
+                pressKey(keys[i]);
+            }
+        }
+    } 
+};
+
 function pressKey(el){
     let isIn=false;
     toggleKey(el);
@@ -166,12 +179,14 @@ function pressKey(el){
 }
 
 function cAlert(title, message){
+    gameEnd=true;
     let cAdiv = document.createElement("div");
     cAdiv.setAttribute("id", "cAlertC");
     cAdiv.innerHTML='<div id=cAlert><div id="cAlertTitle">'+title+'</div><div id="cAlertMsg">'+message+'</div><input id="cAOk" type="button" value="Jugar de nuevo"></div>';
     document.body.appendChild(cAdiv);
     document.getElementById("cAOk").addEventListener("click", ()=>{
         document.body.removeChild(cAdiv);
+        gameEnd=false;
         newGame();
     });
 }
