@@ -65,11 +65,11 @@ h1{
     text-align: right;
 }
 
-#menuContainer input, .screen, #keyboard, .key, #nw{
+#menuContainer input, .screen, #keyboard, .key, #nw, #cAlert{
     border: solid .1rem var(--clr-pfont);
 }
 
-.screen, #keyboard, #menuContainer input, #nw{
+.screen, #keyboard, #menuContainer input, #nw, #cAlert{
     box-shadow: .2rem .2rem 0 var(--clr-pfont), -.2rem -.2rem 0 var(--clr-pfont);
 }
 
@@ -91,11 +91,14 @@ h1{
     margin: 0 auto;
 }
 
+.key, #cAlert input{
+    font-family: 'VT323',monospace;
+}
+
 .key{
     width: 8%;
     aspect-ratio: 1;
     margin:.8%;
-    font-family: 'VT323',monospace;
     font-size: .9rem;
 }
 .key:nth-child(11){
@@ -182,6 +185,50 @@ input{
     cursor: pointer;
 }
 
+.usedKey{
+    visibility: hidden;
+}
+
+#cAlertC{
+    position: absolute;
+    background-color: rgba(119, 119, 119, 0.2);
+    width: 100%;
+    height: 100%;
+}
+
+#cAlert{
+    position: absolute;
+    background-color: var(--clr-bg);
+    min-width: 80%;
+    left:50%;
+    top:50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: .5rem;
+    text-align: center;
+    color:vaR(--clr-pfont);
+}
+
+#cAlertTitle{
+    font-size: 1.5rem;
+}
+
+#cAlertMsg{
+    font-size: .8rem;
+}
+#cAlert input{
+    margin-top: 1rem;
+    min-width: 50%;
+    font-size: .8rem;
+    border: .1rem solid var(--clr-pfont);
+    background-color: var(--clr-input);
+    cursor: pointer;
+    padding: .1rem;
+}
+
+#cAlert input:hover{
+    background-color: var(--clr-hover);
+}
+
 @media only screen and (orientation:landscape){
     html{
         font-size: max(20px, 3vw);
@@ -220,5 +267,9 @@ input{
 
     h1{
         padding-top: 0;
+    }
+
+    #cAlert{
+        min-width: 30%;
     }
 }
